@@ -44,10 +44,12 @@ matrix:
 install:
   #- haxelib git tink_io https://github.com/haxetink/tink_io pure
   #- haxelib git tink_cli https://github.com/haxetink/tink_cli pure
-  #- haxelib git travix https://github.com/back2dos/travix && pushd . && cd $(haxelib config)travix/git && haxe build-neko.hxml && popd
-  #- haxelib run travix install
+  - haxelib install tink_io
+  - haxelib install tink_cli
+  - haxelib git travix https://github.com/back2dos/travix && pushd . && cd $(haxelib config)travix/git && haxe build-neko.hxml && popd
+  - haxelib run travix install
   - haxelib dev haxe-doctest .
-  - haxelib install travix
+  #- haxelib install travix
   - haxelib install hx3compat
   - haxelib install munit
   - haxelib install tink_testrunner
