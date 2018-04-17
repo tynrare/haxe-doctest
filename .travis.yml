@@ -39,8 +39,6 @@ matrix:
       env: HAXE_TARGET=lua
     - haxe: "3.2.1"
       env: HAXE_TARGET=php7
-    - haxe: development
-      os: osx
 
 install:
   #- haxelib git tink_io https://github.com/haxetink/tink_io pure
